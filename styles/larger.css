@@ -1,0 +1,37 @@
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    #primary-nav {
+        display: block !important;
+        background-color: var(--accent-color);
+    }
+
+    #primary-nav ul {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #primary-nav a {
+        padding: 12px 30px;
+        text-align: left;
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .profile-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 25px;
+    }
+    
+    .profile-layout .card {
+        margin-bottom: 0;
+    }
+
+    .courses-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}

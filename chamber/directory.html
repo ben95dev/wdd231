@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Business Directory</title>
+    <meta name="description" content="Explore and support the local businesses in our community through our Chamber of Commerce business directory page.">
+    <meta name="author" content="Benjamin Iriganje">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Chamber of Commerce Business Directory">
+    <meta property="og:description" content="Discover, connect, and grow with leading businesses in our region.">
+    <meta property="og:image" content="https://github.com/your-username/your-repo/raw/main/chamber/images/og-share.jpg">
+    <meta property="og:url" content="https://your-username.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+    <script src="directory.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.png" alt="Chamber Logo" id="logo">
+            <h1>Regional Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="menu-toggle">≡</button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Business Directory</h2>
+        
+        <!-- View Toggle Controls -->
+        <div class="menu-controls">
+            <button id="grid-btn" class="active">Grid View</button>
+            <button id="list-btn">List View</button>
+        </div>
+
+        <!-- Target Container for JS injection -->
+        <article id="directory-container" class="grid-view">
+            <!-- Business cards/list items will load here dynamically via JavaScript -->
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <p><strong>Regional Chamber of Commerce</strong></p>
+            <p>456 Chamber Blvd, Suite A</p>
+            <p>Phone: (555) 123-4567 | info@chamber.org</p>
+        </div>
+        <hr>
+        <div class="footer-dev">
+            <p>&copy; 2026 <span id="current-year"></span> | Benjamin Iriganje | WDD 231</p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

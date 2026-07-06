@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Summit Tech Solutions",
+    "address": "123 Innovation Way, Suite 400",
+    "phone": "(555) 019-2834",
+    "website": "https://example.com/summit",
+    "image": "images/business1.jpg",
+    "membershipLevel": 3,
+    "tagline": "Elevating your digital infrastructure."
+  },
+  {
+    "name": "Green Leaf Café",
+    "address": "789 Maple Ave",
+    "phone": "(555) 014-9921",
+    "website": "https://example.com/greenleaf",
+    "image": "images/business2.jpg",
+    "membershipLevel": 1,
+    "tagline": "Organic brews and locally sourced bites."
+  },
+  {
+    "name": "Blue Horizon Marketing",
+    "address": "456 Ocean Vista Blvd",
+    "phone": "(555) 017-5543",
+    "website": "https://example.com/bluehorizon",
+    "image": "images/business3.jpg",
+    "membershipLevel": 2,
+    "tagline": "Navigate your brand to success."
+  },
+  {
+    "name": "Apex Auto Repair",
+    "address": "102 Industrial Pkwy",
+    "phone": "(555) 012-3344",
+    "website": "https://example.com/apexauto",
+    "image": "images/business4.jpg",
+    "membershipLevel": 1,
+    "tagline": "Honest mechanics, reliable service."
+  },
+  {
+    "name": "Vanguard Law Group",
+    "address": "555 Court St, Floor 2",
+    "phone": "(555) 015-8877",
+    "website": "https://example.com/vanguard",
+    "image": "images/business5.jpg",
+    "membershipLevel": 3,
+    "tagline": "Protecting your business assets."
+  },
+  {
+    "name": "Pinnacle Fitness Center",
+    "address": "888 Health Club Dr",
+    "phone": "(555) 011-2233",
+    "website": "https://example.com/pinnacle",
+    "image": "images/business6.jpg",
+    "membershipLevel": 2,
+    "tagline": "Reach your peak performance."
+  },
+  {
+    "name": "Beacon Books",
+    "address": "12 Main St",
+    "phone": "(555) 016-4455",
+    "website": "https://example.com/beaconbooks",
+    "image": "images/business7.jpg",
+    "membershipLevel": 1,
+    "tagline": "Your community hub for literature."
+  }
+]
