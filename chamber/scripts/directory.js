@@ -11,14 +11,15 @@ menuToggle.addEventListener("click", () => {
 });
 
 // Asynchronous Data Fetching
-const url = "data/members.json";
+// FIXED: Adjusted path to match your folder structure (stepping out of scripts/ into images/)
+const url = "../images/members.json"; 
 const container = document.getElementById("directory-container");
 
 async function getMemberData() {
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error("Network response was not lookin' good.");
+            throw new Error("Network response was not looking' good.");
         }
         const data = await response.json();
         displayMembers(data);
