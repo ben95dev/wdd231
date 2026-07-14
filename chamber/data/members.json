@@ -1,65 +1,83 @@
 [
   {
-    "name": "Summit Tech Solutions",
-    "address": "123 Innovation Way, Suite 400",
-    "phone": "(555) 019-2834",
-    "website": "https://example.com/summit",
-    "image": "images/business1.jpg",
-    "membershipLevel": 3,
-    "tagline": "Elevating your digital infrastructure."
+    "name": "Hearth & Home Bakery",
+    "category": "Restaurant",
+    "tier": "gold",
+    "description": "Wood-fired sourdough and pastries baked fresh daily on Main Street.",
+    "address": "112 Main St",
+    "phone": "(555) 201-3344",
+    "website": "https://example.com/hearth-home"
   },
   {
-    "name": "Green Leaf Café",
-    "address": "789 Maple Ave",
-    "phone": "(555) 014-9921",
-    "website": "https://example.com/greenleaf",
-    "image": "images/business2.jpg",
-    "membershipLevel": 1,
-    "tagline": "Organic brews and locally sourced bites."
+    "name": "Ridgeline Legal Group",
+    "category": "Professional Services",
+    "tier": "gold",
+    "description": "Family and small-business law with same-week consultations.",
+    "address": "48 Court Ave, Suite 3",
+    "phone": "(555) 204-7710",
+    "website": "https://example.com/ridgeline-legal"
   },
   {
-    "name": "Blue Horizon Marketing",
-    "address": "456 Ocean Vista Blvd",
-    "phone": "(555) 017-5543",
-    "website": "https://example.com/bluehorizon",
-    "image": "images/business3.jpg",
-    "membershipLevel": 2,
-    "tagline": "Navigate your brand to success."
+    "name": "Maple & Co. Hardware",
+    "category": "Retail",
+    "tier": "silver",
+    "description": "Tools, lumber, and paint with staff who actually know how to use them.",
+    "address": "670 Industrial Pkwy",
+    "phone": "(555) 209-4482",
+    "website": "https://example.com/maple-hardware"
   },
   {
-    "name": "Apex Auto Repair",
-    "address": "102 Industrial Pkwy",
-    "phone": "(555) 012-3344",
-    "website": "https://example.com/apexauto",
-    "image": "images/business4.jpg",
-    "membershipLevel": 1,
-    "tagline": "Honest mechanics, reliable service."
+    "name": "Bluepeak Technology Partners",
+    "category": "Technology",
+    "tier": "gold",
+    "description": "Managed IT and cybersecurity support for local small businesses.",
+    "address": "220 Innovation Dr",
+    "phone": "(555) 217-9903",
+    "website": "https://example.com/bluepeak"
   },
   {
-    "name": "Vanguard Law Group",
-    "address": "555 Court St, Floor 2",
-    "phone": "(555) 015-8877",
-    "website": "https://example.com/vanguard",
-    "image": "images/business5.jpg",
-    "membershipLevel": 3,
-    "tagline": "Protecting your business assets."
+    "name": "Willow Creek Wellness Studio",
+    "category": "Health & Wellness",
+    "tier": "silver",
+    "description": "Yoga, massage therapy, and community wellness classes.",
+    "address": "15 Creekside Ln",
+    "phone": "(555) 223-6651",
+    "website": "https://example.com/willow-creek"
   },
   {
-    "name": "Pinnacle Fitness Center",
-    "address": "888 Health Club Dr",
-    "phone": "(555) 011-2233",
-    "website": "https://example.com/pinnacle",
-    "image": "images/business6.jpg",
-    "membershipLevel": 2,
-    "tagline": "Reach your peak performance."
+    "name": "Founders Construction Co.",
+    "category": "Construction",
+    "tier": "member",
+    "description": "Residential remodeling and additions built to last generations.",
+    "address": "902 Timber Rd",
+    "phone": "(555) 230-8827",
+    "website": "https://example.com/founders-construction"
   },
   {
-    "name": "Beacon Books",
-    "address": "12 Main St",
-    "phone": "(555) 016-4455",
-    "website": "https://example.com/beaconbooks",
-    "image": "images/business7.jpg",
-    "membershipLevel": 1,
-    "tagline": "Your community hub for literature."
+    "name": "Northgate Community Foundation",
+    "category": "Non-Profit",
+    "tier": "member",
+    "description": "Connecting neighbors with housing, food, and job resources.",
+    "address": "35 Civic Center Way",
+    "phone": "(555) 241-1190",
+    "website": "https://example.com/northgate-foundation"
+  },
+  {
+    "name": "The Lantern Inn",
+    "category": "Hospitality",
+    "tier": "silver",
+    "description": "A twelve-room inn hosting travelers and local events since 1998.",
+    "address": "8 Harbor View Rd",
+    "phone": "(555) 255-3320",
+    "website": "https://example.com/lantern-inn"
+  },
+  {
+    "name": "Crestwood Learning Center",
+    "category": "Education",
+    "tier": "member",
+    "description": "Tutoring and test prep for students of every age and subject.",
+    "address": "410 Scholar St",
+    "phone": "(555) 262-4471",
+    "website": "https://example.com/crestwood-learning"
   }
 ]

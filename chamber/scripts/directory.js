@@ -1,77 +1,112 @@
-// Footer Dates
-document.getElementById("current-year").textContent = new Date().getFullYear();
-document.getElementById("last-modified").textContent = `Last Modified: ${document.lastModified}`;
+// ==========================================================================
+// Regional Chamber of Commerce — Business Directory
+// directory.js
+// ==========================================================================
 
-// Responsive Navigation Toggle
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
+const DATA_URL = "data/members.json";
 
-menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
-});
+const container = document.querySelector("#directory-container");
+const gridBtn = document.querySelector("#grid-btn");
+const listBtn = document.querySelector("#list-btn");
+const menuToggle = document.querySelector("#menu-toggle");
+const navMenu = document.querySelector("#nav-menu");
 
-// Asynchronous Data Fetching
-// FIXED: Adjusted path to match your folder structure (stepping out of scripts/ into images/)
-const url = "../images/members.json"; 
-const container = document.getElementById("directory-container");
+const TIER_LABELS = {
+  gold: "Gold Member",
+  silver: "Silver Member",
+  member: "Member"
+};
 
-async function getMemberData() {
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error("Network response was not looking' good.");
-        }
-        const data = await response.json();
-        displayMembers(data);
-    } catch (error) {
-        console.error("Error fetching data:", error);
-        container.innerHTML = "<p>Unable to load directory at this time.</p>";
+// ---------- Fetch and render directory data ----------
+async function loadDirectory() {
+  container.setAttribute("aria-busy", "true");
+  container.innerHTML = `<p class="loading-message">Loading member businesses…</p>`;
+
+  try {
+    const response = await fetch(DATA_URL);
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
     }
+    const members = await response.json();
+    renderDirectory(members);
+  } catch (error) {
+    container.innerHTML = `
+      <p class="error-message">
+        Sorry — the member directory couldn't be loaded right now.
+        Please refresh the page or try again later.
+      </p>`;
+    console.error("Failed to load directory data:", error);
+  } finally {
+    container.removeAttribute("aria-busy");
+  }
 }
 
-// Generate HTML Cards Dynamically
-function displayMembers(members) {
-    container.innerHTML = ""; // Clear existing content
+// ---------- Build a single business card ----------
+function createCard(member) {
+  const card = document.createElement("div");
+  card.className = "business-card";
 
-    members.forEach((member) => {
-        const card = document.createElement("section");
-        card.classList.add("member-card");
+  const tierLabel = TIER_LABELS[member.tier] || "Member";
 
-        // Map membership level integers to strings
-        let membershipText = "Member";
-        if (member.membershipLevel === 2) membershipText = "Silver";
-        if (member.membershipLevel === 3) membershipText = "Gold";
+  card.innerHTML = `
+    <span class="member-seal ${member.tier}">${tierLabel}</span>
+    <h3>${member.name}</h3>
+    <p class="category">${member.category}</p>
+    <p class="description">${member.description}</p>
+    <div class="details">
+      <span class="address">${member.address}</span>
+      <span class="phone">${member.phone}</span>
+      <a href="${member.website}" target="_blank" rel="noopener">Visit website</a>
+    </div>
+  `;
 
-        card.innerHTML = `
-            <img src="${member.image}" alt="${member.name} Logo" loading="lazy">
-            <h3>${member.name}</h3>
-            <p class="tagline"><em>"${member.tagline}"</em></p>
-            <p class="address">${member.address}</p>
-            <p class="phone">${member.phone}</p>
-            <p class="website"><a href="${member.website}" target="_blank">Visit Website</a></p>
-            <span class="badge level-${member.membershipLevel}">${membershipText} Member</span>
-        `;
-        container.appendChild(card);
+  return card;
+}
+
+// ---------- Render all cards into the container ----------
+function renderDirectory(members) {
+  container.innerHTML = "";
+
+  if (!members || members.length === 0) {
+    container.innerHTML = `<p class="empty-message">No member businesses to display yet.</p>`;
+    return;
+  }
+
+  members
+    .slice()
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .forEach((member) => {
+      container.appendChild(createCard(member));
     });
 }
 
-// Grid vs List Layout Toggling
-const gridBtn = document.getElementById("grid-btn");
-const listBtn = document.getElementById("list-btn");
+// ---------- Grid / list view toggle ----------
+function setView(view) {
+  const isGrid = view === "grid";
 
-gridBtn.addEventListener("click", () => {
-    container.classList.add("grid-view");
-    container.classList.remove("list-view");
-    gridBtn.classList.add("active");
-    listBtn.classList.remove("active");
+  container.classList.toggle("grid-view", isGrid);
+  container.classList.toggle("list-view", !isGrid);
+
+  gridBtn.classList.toggle("active", isGrid);
+  listBtn.classList.toggle("active", !isGrid);
+
+  gridBtn.setAttribute("aria-pressed", String(isGrid));
+  listBtn.setAttribute("aria-pressed", String(!isGrid));
+}
+
+gridBtn.addEventListener("click", () => setView("grid"));
+listBtn.addEventListener("click", () => setView("list"));
+
+// ---------- Mobile nav toggle ----------
+menuToggle.addEventListener("click", () => {
+  const isOpen = navMenu.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-listBtn.addEventListener("click", () => {
-    container.classList.add("list-view");
-    container.classList.remove("grid-view");
-    listBtn.classList.add("active");
-    gridBtn.classList.remove("active");
-});
+// ---------- Footer: current year + last modified ----------
+document.querySelector("#current-year").textContent = new Date().getFullYear();
+document.querySelector("#last-modified").textContent =
+  `Last updated: ${document.lastModified}`;
 
-// Initialize Fetch Execution
-getMemberData();
+// ---------- Init ----------
+loadDirectory();

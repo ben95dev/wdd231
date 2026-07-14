@@ -8,18 +8,18 @@
     <meta name="author" content="Benjamin Iriganje">
     
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 
     <!-- Facebook Open Graph Meta Tags -->
     <!-- Corrected Facebook Open Graph Meta Tags -->
-<meta property="og:title" content="Chamber of Commerce Business Directory">
+<meta property="og:title" content="Chamber of Commerce Business Directory - Find Local Businesses">
 <meta property="og:description" content="Discover, connect, and grow with leading businesses in our region.">
 <meta property="og:url" content="https://ben95dev.github.io/wdd231/chamber/directory.html">
 <meta property="og:image" content="https://ben95dev.github.io/wdd231/chamber/images/og-share.jpg">
 <meta property="og:type" content="website">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
     <script src="directory.js" defer></script>
@@ -33,7 +33,7 @@
             <h1>Regional Chamber of Commerce</h1>
         </div>
         <nav>
-            <button id="menu-toggle">≡</button>
+            <button id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">≡</button>
             <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html" class="active">Directory</a></li>
@@ -48,8 +48,8 @@
         
         <!-- View Toggle Controls -->
         <div class="menu-controls">
-            <button id="grid-btn" class="active">Grid View</button>
-            <button id="list-btn">List View</button>
+            <button id="grid-btn" class="active" aria-pressed="true">Grid View</button>
+            <button id="list-btn" aria-pressed="false">List View</button>
         </div>
 
         <!-- Target Container for JS injection -->
@@ -66,7 +66,7 @@
         </div>
         <hr>
         <div class="footer-dev">
-            <p>&copy; 2026 <span id="current-year"></span> | Benjamin Iriganje | WDD 231</p>
+            <p>&copy; <span id="current-year"></span> Benjamin Iriganje | WDD 231</p>
             <p id="last-modified"></p>
         </div>
     </footer>
