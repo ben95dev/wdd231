@@ -40,10 +40,24 @@ header {
     gap: 12px;
 }
 
-.logo-area span {
-    font-size: 1.3rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+.logo-area img {
+  border-radius: 50%;
+  background: var(--paper);
+  padding: 5px;
+  border: 3px solid #ffffff; /* Adds the outer white ring */
+  box-sizing: border-box;    /* Ensures border doesn't break image dimensions */
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-area img {
+  border-radius: 50%;
+  background: var(--paper);
+  padding: 4px;
 }
 
 #menu-toggle {

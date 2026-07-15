@@ -24,22 +24,28 @@ async function loadDirectory() {
 
   try {
     const response = await fetch(DATA_URL);
+
     if (!response.ok) {
       throw new Error(`Request failed with status ${response.status}`);
     }
+
     const members = await response.json();
     renderDirectory(members);
+
   } catch (error) {
     container.innerHTML = `
       <p class="error-message">
         Sorry — the member directory couldn't be loaded right now.
         Please refresh the page or try again later.
       </p>`;
+
     console.error("Failed to load directory data:", error);
+
   } finally {
     container.removeAttribute("aria-busy");
   }
 }
+
 
 // ---------- Build a single business card ----------
 function createCard(member) {
@@ -53,22 +59,28 @@ function createCard(member) {
     <h3>${member.name}</h3>
     <p class="category">${member.category}</p>
     <p class="description">${member.description}</p>
+
     <div class="details">
       <span class="address">${member.address}</span>
       <span class="phone">${member.phone}</span>
-      <a href="${member.website}" target="_blank" rel="noopener">Visit website</a>
+      <a href="${member.website}" target="_blank" rel="noopener">
+        Visit website
+      </a>
     </div>
   `;
 
   return card;
 }
 
+
 // ---------- Render all cards into the container ----------
 function renderDirectory(members) {
+
   container.innerHTML = "";
 
   if (!members || members.length === 0) {
-    container.innerHTML = `<p class="empty-message">No member businesses to display yet.</p>`;
+    container.innerHTML =
+      `<p class="empty-message">No member businesses to display yet.</p>`;
     return;
   }
 
@@ -80,8 +92,10 @@ function renderDirectory(members) {
     });
 }
 
+
 // ---------- Grid / list view toggle ----------
 function setView(view) {
+
   const isGrid = view === "grid";
 
   container.classList.toggle("grid-view", isGrid);
@@ -94,19 +108,34 @@ function setView(view) {
   listBtn.setAttribute("aria-pressed", String(!isGrid));
 }
 
+
 gridBtn.addEventListener("click", () => setView("grid"));
 listBtn.addEventListener("click", () => setView("list"));
 
+
 // ---------- Mobile nav toggle ----------
 menuToggle.addEventListener("click", () => {
+
   const isOpen = navMenu.classList.toggle("open");
+
   menuToggle.setAttribute("aria-expanded", String(isOpen));
+
 });
 
+
 // ---------- Footer: current year + last modified ----------
-document.querySelector("#current-year").textContent = new Date().getFullYear();
-document.querySelector("#last-modified").textContent =
-  `Last updated: ${document.lastModified}`;
+const yearElement = document.querySelector("#current-year");
+const modifiedElement = document.querySelector("#last-modified");
+
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
+
+if (modifiedElement) {
+  modifiedElement.textContent =
+    `Last updated: ${document.lastModified}`;
+}
+
 
 // ---------- Init ----------
 loadDirectory();
