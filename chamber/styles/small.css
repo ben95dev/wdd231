@@ -191,7 +191,7 @@ main > h2 {
 }
 
 .menu-controls button:hover:not(.active) {
-  background-color: rgba(30, 43, 40, 0.08);
+  background-color:var(--ink);
 }
 
 /* ---------- Directory container ---------- */
@@ -244,7 +244,7 @@ main > h2 {
 }
 
 .member-seal.gold { color: var(--brass-dark); }
-.member-seal.silver { color: #6b7a74; }
+.member-seal.silver { color: var(--rule) }
 .member-seal.member { color: var(--stamp-teal); }
 
 .business-card h3 {
@@ -353,8 +353,8 @@ footer hr {
 }
 
 footer{
-    background:#1e2b35;
-    color:#fff;
+    background:var(--brass-dark);
+    color:var(--paper-card);
     text-align:center;
     padding:2rem 1rem;
     margin-top:3rem;
@@ -368,7 +368,7 @@ footer{
 }
 
 .social-links a{
-    color:#fff;
+    color: var(--paper-card);
     font-size:1.6rem;
     transition:.3s;
 }

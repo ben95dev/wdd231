@@ -5,7 +5,7 @@
     "tier": "gold",
     "description": "Wood-fired sourdough and pastries baked fresh daily on Main Street.",
     "address": "112 Main St",
-    "phone": "(555) 201-3344",
+    "phone": "(257) 6860-5786",
     "website": "https://example.com/hearth-home"
   },
   {
@@ -14,7 +14,7 @@
     "tier": "gold",
     "description": "Family and small-business law with same-week consultations.",
     "address": "48 Court Ave, Suite 3",
-    "phone": "(555) 204-7710",
+    "phone": "(257) 6688-9482",
     "website": "https://example.com/ridgeline-legal"
   },
   {
@@ -23,7 +23,7 @@
     "tier": "silver",
     "description": "Tools, lumber, and paint with staff who actually know how to use them.",
     "address": "670 Industrial Pkwy",
-    "phone": "(555) 209-4482",
+    "phone": "(257) 7663-4528",
     "website": "https://example.com/maple-hardware"
   },
   {
@@ -32,7 +32,7 @@
     "tier": "gold",
     "description": "Managed IT and cybersecurity support for local small businesses.",
     "address": "220 Innovation Dr",
-    "phone": "(555) 217-9903",
+    "phone": "(257) 6860-5786",
     "website": "https://example.com/bluepeak"
   },
   {
@@ -41,7 +41,7 @@
     "tier": "silver",
     "description": "Yoga, massage therapy, and community wellness classes.",
     "address": "15 Creekside Ln",
-    "phone": "(555) 223-6651",
+    "phone": "(257) 6688-9482",
     "website": "https://example.com/willow-creek"
   },
   {
@@ -50,7 +50,7 @@
     "tier": "member",
     "description": "Residential remodeling and additions built to last generations.",
     "address": "902 Timber Rd",
-    "phone": "(555) 230-8827",
+    "phone": "(257) 6860-5786",
     "website": "https://example.com/founders-construction"
   },
   {
@@ -59,7 +59,7 @@
     "tier": "member",
     "description": "Connecting neighbors with housing, food, and job resources.",
     "address": "35 Civic Center Way",
-    "phone": "(555) 241-1190",
+    "phone": "(257) 7663-4528",
     "website": "https://example.com/northgate-foundation"
   },
   {
@@ -68,7 +68,7 @@
     "tier": "silver",
     "description": "A twelve-room inn hosting travelers and local events since 1998.",
     "address": "8 Harbor View Rd",
-    "phone": "(555) 255-3320",
+    "phone": "(257) 6688-9482",
     "website": "https://example.com/lantern-inn"
   },
   {
@@ -77,7 +77,7 @@
     "tier": "member",
     "description": "Tutoring and test prep for students of every age and subject.",
     "address": "410 Scholar St",
-    "phone": "(555) 262-4471",
+    "phone": "(257) 6860-5786",
     "website": "https://example.com/crestwood-learning"
   }
 ]
