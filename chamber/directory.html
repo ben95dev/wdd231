@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber Directory - WDD 231 Course Portal - Benjamin Iriganje</title>
+    <title>Chamber of Commerce - Business Directory</title>
     <meta name="description" content="Explore and support the local businesses in our community through our Chamber of Commerce business directory page.">
     <meta name="author" content="Benjamin Iriganje">
     
-    <!-- FIXED: Favicon Path matches your chamber/images/ folder structure -->
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="Chamber of Commerce Business Directory - Find Local Businesses">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Chamber of Commerce Business Directory">
     <meta property="og:description" content="Discover, connect, and grow with leading businesses in our region.">
-    <meta property="og:url" content="https://ben95dev.github.io/wdd231/chamber/directory.html">
     <meta property="og:image" content="https://ben95dev.github.io/wdd231/chamber/images/og-share.jpg">
+    <meta property="og:url" content="https://ben95dev.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 
     <!-- Stylesheets -->
@@ -27,13 +27,13 @@
 
     <header>
         <div class="logo-area">
-            <img src="images/favicon.svg" alt="Chamber Logo" width="45" height="45">
+            <img src="images/favicon.svg" alt="Chamber Logo" id="logo" width="30" height="30">
             <h1>Regional Chamber of Commerce</h1>
         </div>
         <nav>
-            <button id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">≡</button>
+            <button id="menu-toggle">≡</button>
             <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="directory.html" class="active">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Contact</a></li>
@@ -46,8 +46,8 @@
         
         <!-- View Toggle Controls -->
         <div class="menu-controls">
-            <button id="grid-btn" class="active" aria-pressed="true">Grid View</button>
-            <button id="list-btn" aria-pressed="false">List View</button>
+            <button id="grid-btn" class="active">Grid View</button>
+            <button id="list-btn">List View</button>
         </div>
 
         <!-- Target Container for JS injection -->
@@ -57,15 +57,18 @@
     </main>
 
     <footer>
-        <!-- Social Links (Points to root images folder as per your layout) -->
-        <div class="social-links">
-            <a href="https://github.com"><img src="../images/github.svg" alt="GitHub Logo" width="30" height="30"></a>
-            <a href="https://linkedin.com"><img src="../images/linkedin.svg" alt="LinkedIn Logo" width="30" height="30"></a>
-            <a href="https://x.com"><img src="../images/twitter.svg" alt="Twitter X Logo" width="30" height="30"></a>
+        <div class="footer-contact">
+            <p><strong>Regional Chamber of Commerce</strong></p>
+            <p>456 Chamber Blvd, Suite A</p>
+            <p>Phone: (555) 123-4567 | info@chamber.org</p>
         </div>
-        <p>&copy;2026 <span id="currentyear"></span> • Benjamin Iriganje • Bujumbura, Burundi</p>
-        <p id="lastModified"></p>
+        <hr>
+        <div class="footer-dev">
+            <p>&copy; <span id="current-year"></span> | Benjamin Iriganje | WDD 231</p>
+            <p id="last-modified"></p>
+        </div>
     </footer>
 
+    
 </body>
 </html>
