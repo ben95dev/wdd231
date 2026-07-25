@@ -37,27 +37,15 @@ header {
 .logo-area {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0.6rem;
 }
 
 .logo-area img {
-  border-radius: 50%;
-  background: var(--paper);
-  padding: 5px;
-  border: 3px solid #ffffff; /* Adds the outer white ring */
-  box-sizing: border-box;    /* Ensures border doesn't break image dimensions */
-}
-
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.logo-area img {
-  border-radius: 50%;
-  background: var(--paper);
-  padding: 4px;
+    border-radius: 50%;
+    background: var(--white);
+    padding: 4px;
+    border: 3px solid #ffffff; /* Adds the outer white ring */
+    box-sizing: border-box;    /* Ensures border doesn't break image dimensions */
 }
 
 #menu-toggle {

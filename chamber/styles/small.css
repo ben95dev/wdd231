@@ -337,8 +337,11 @@ main > h2 {
 /* ---------- Footer ---------- */
 footer {
   background-color: var(--ink);
-  color: var(--paper);
-  padding: 1.5rem 1rem;
+  background:var(--brass-dark);
+  color: var(--paper-card);
+  text-align:center;
+  padding:2rem 1rem;
+  margin-top:3rem;
   font-size: 0.85rem;
 }
 
@@ -350,14 +353,6 @@ footer hr {
   border: none;
   border-top: 1px solid var(--ink-soft);
   margin: 0.9rem 0;
-}
-
-footer{
-    background:var(--brass-dark);
-    color:var(--paper-card);
-    text-align:center;
-    padding:2rem 1rem;
-    margin-top:3rem;
 }
 
 .social-links{
