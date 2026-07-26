@@ -5,6 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
     timestampField.value = new Date().toString();
   }
 
+  // Highlight the selected membership-level radio option.
+  document.querySelectorAll('input[name="membershipLevel"]').forEach((radio) => {
+    radio.addEventListener('change', () => {
+      document.querySelectorAll('.radio-option').forEach((option) => {
+        const ownRadio = option.querySelector('input[name="membershipLevel"]');
+        option.classList.toggle('is-selected', !!ownRadio && ownRadio.checked);
+      });
+    });
+  });
+
   // Wire up each "See benefits" link to open its matching modal.
   document.querySelectorAll('[data-modal]').forEach((trigger) => {
     trigger.addEventListener('click', () => {
