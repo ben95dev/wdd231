@@ -1,0 +1,17 @@
+[
+  { "id": 1, "name": "Standard Office Paper Pack", "category": "supplies", "price": "$12.50", "inStock": true, "description": "500 sheets of high-quality white printer paper for everyday business printing." },
+  { "id": 2, "name": "Wireless USB Mouse", "category": "electronics", "price": "$22.00", "inStock": true, "description": "Ergonomic 2.4GHz optical wireless mouse with long battery life." },
+  { "id": 3, "name": "Retail Store Bundle Kit", "category": "packages", "price": "$85.00", "inStock": true, "description": "Includes barcode scanner, receipt roll pack, and stand." },
+  { "id": 4, "name": "Thermal Receipt Rolls (10 Pack)", "category": "supplies", "price": "$18.00", "inStock": true, "description": "Standard size thermal paper rolls for POS machines." },
+  { "id": 5, "name": "USB-C Multi-Port Hub", "category": "electronics", "price": "$34.99", "inStock": false, "description": "Aluminum 6-in-1 adapter with HDMI, USB 3.0, and SD reader." },
+  { "id": 6, "name": "Heavy-Duty Stapler", "category": "supplies", "price": "$14.25", "inStock": true, "description": "All-metal construction capable of stapling up to 50 sheets." },
+  { "id": 7, "name": "Barcode Scanner Handheld", "category": "electronics", "price": "$45.00", "inStock": true, "description": "Plug-and-play USB 1D laser barcode scanner for retail checkouts." },
+  { "id": 8, "name": "Price Label Gun", "category": "supplies", "price": "$29.99", "inStock": true, "description": "1-line tagger for pricing and date labeling." },
+  { "id": 9, "name": "Cash Drawer Heavy Steel", "category": "packages", "price": "$69.50", "inStock": true, "description": "Removable tray cash drawer with 5 bill and 8 coin slots." },
+  { "id": 10, "name": "Digital POS Scale", "category": "electronics", "price": "$110.00", "inStock": false, "description": "High-precision electronic computing scale for bulk items." },
+  { "id": 11, "name": "Shipping Box Pack (25-Pack)", "category": "supplies", "price": "$32.00", "inStock": true, "description": "Corrugated cardboard boxes for retail order fulfillment." },
+  { "id": 12, "name": "Label Tape Printer Cartridge", "category": "supplies", "price": "$11.99", "inStock": true, "description": "Laminated black-on-white replacement label tape." },
+  { "id": 13, "name": "Security Counter Stand", "category": "packages", "price": "$39.99", "inStock": true, "description": "Locking tablet stand for POS customer checkout screens." },
+  { "id": 14, "name": "LED Open Sign Display", "category": "electronics", "price": "$27.50", "inStock": true, "description": "Bright flashing LED storefront display sign." },
+  { "id": 15, "name": "Shopping Baskets Set (6-Pack)", "category": "packages", "price": "$48.00", "inStock": true, "description": "Durable plastic hand baskets with chrome handles." }
+]
