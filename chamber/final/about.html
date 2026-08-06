@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retail Hub - About Us</title>
+  <meta name="description" content="Learn about Retail Hub's mission, shop history, and commitment to delivering quality retail goods locally.">
+  <meta name="author" content="Benjamin Iriganje">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>Retail Hub</h1>
+      </div>
+      <button id="menu-toggle" aria-label="Toggle Navigation Menu">
+        <span class="hamburger">&#9776;</span>
+        <span class="close hidden">&times;</span>
+      </button>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="about-container">
+    <section class="card">
+      <h2>Our Story</h2>
+      <p>Retail Hub was founded to streamline how customers access essential goods, store inventory details, and bulk order pricing. Our goal is to connect everyday shoppers with real-time stock availability, ensuring a seamless bridge between online browsing and physical shop visits.</p>
+    </section>
+
+    <div class="about-grid">
+      <section class="card">
+        <h2>Our Mission</h2>
+        <p>To deliver competitive pricing, dependable product quality, and responsive service to our local community while maintaining continuous digital updates on inventory status.</p>
+      </section>
+
+      <section class="card">
+        <h2>Core Values</h2>
+        <ul>
+          <li><strong>Transparency:</strong> Accurate, real-time inventory listings.</li>
+          <li><strong>Efficiency:</strong> Fast turnaround on order inquiries and local pickups.</li>
+          <li><strong>Community Focus:</strong> Dedicated to meeting regional demand with quality choices.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Retail Hub | Benjamin Iriganje</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* ==========================================================================
+   1. CSS Custom Properties (Variables)
+   ========================================================================== */
+:root {
+  --primary-color: #1E3A8A;       /* Deep Navy */
+  --secondary-color: #D97706;     /* Warm Amber Accent */
+  --text-dark: #1F2937;           /* Off-black for primary text */
+  --bg-light: #F3F4F6;            /* Light gray page background */
+  --card-bg: #FFFFFF;             /* White container background */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --border-radius: 8px;
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   2. Reset & Box Model
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   3. Base HTML Elements
+   ========================================================================== */
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  padding-left: 1.2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   4. Shared Components & Utilities
+   ========================================================================== */
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.card h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--bg-light);
+  padding-bottom: 0.5rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Global Footer Base */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}

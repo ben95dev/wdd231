@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retail Hub - Product Catalog</title>
+  <meta name="description" content="Browse current inventory, pricing, and product availability at Retail Hub.">
+  <meta name="author" content="Benjamin Iriganje">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>Retail Hub</h1>
+      </div>
+      <button id="menu-toggle" aria-label="Toggle Navigation Menu">
+        <span class="hamburger">&#9776;</span>
+        <span class="close hidden">&times;</span>
+      </button>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <h2>In-Stock Inventory</h2>
+      <p>Filter products by category to inspect pricing and stock levels.</p>
+    </section>
+
+    <!-- Category Filter Controls -->
+    <div class="filter-controls">
+      <button class="filter-btn active" data-category="all">All Items</button>
+      <button class="filter-btn" data-category="supplies">General Supplies</button>
+      <button class="filter-btn" data-category="electronics">Electronics</button>
+      <button class="filter-btn" data-category="packages">Bundles & Packages</button>
+    </div>
+
+    <!-- Product Grid Container -->
+    <section id="product-display-grid" class="product-grid-full">
+      <!-- Products will render dynamically via JS -->
+    </section>
+
+    <!-- Modal Dialog for Product Details -->
+    <dialog id="product-modal">
+      <div class="modal-content">
+        <button id="close-modal" aria-label="Close dialog">&times;</button>
+        <h3 id="modal-title"></h3>
+        <p id="modal-category" class="modal-badge"></p>
+        <p id="modal-description"></p>
+        <p id="modal-price" class="price"></p>
+        <p id="modal-stock" class="status"></p>
+      </div>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Retail Hub | Benjamin Iriganje</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>

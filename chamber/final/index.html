@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retail Hub - Quality Products & Local Supplies</title>
+  <meta name="description" content="Retail Hub storefront catalog showcasing local product inventory, pricing, and business operating hours.">
+  <meta name="author" content="Benjamin Iriganje">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>Retail Hub</h1>
+      </div>
+      <button id="menu-toggle" aria-label="Toggle Navigation Menu">
+        <span class="hamburger">&#9776;</span>
+        <span class="close hidden">&times;</span>
+      </button>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Banner with Smooth Scroll Trigger -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Your Trusted Local Retail Partner</h2>
+        <p>Explore our in-stock products, bulk order discounts, and direct store inquiries.</p>
+        <a href="#featured" id="view-featured-btn" class="cta-button">View Featured Items</a>
+      </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <div class="main-layout">
+      <!-- Dynamic Featured Inventory Container -->
+      <section id="featured" class="card featured-section">
+        <div class="section-header">
+          <h2>Featured Inventory</h2>
+          <a href="products.html" class="see-all-link">See All Products &rarr;</a>
+        </div>
+        <div id="home-featured-grid" class="product-grid">
+          <!-- Dynamically populated via JavaScript -->
+        </div>
+      </section>
+
+      <!-- Sidebar Info Section -->
+      <aside class="card sidebar">
+        <h2>Store Information</h2>
+        <div class="info-block">
+          <h3>Operating Hours</h3>
+          <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+          <p>Saturday: 9:00 AM - 4:00 PM</p>
+          <p>Sunday: Closed</p>
+        </div>
+        <div class="info-block">
+          <h3>Quick Contact</h3>
+          <p>Email: support@retailhub-local.org</p>
+          <p>Location: Central Shop Plaza</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Product Details Modal -->
+    <dialog id="product-modal">
+      <div class="modal-content">
+        <button id="close-modal" aria-label="Close dialog">&times;</button>
+        <h3 id="modal-title"></h3>
+        <p id="modal-category" class="modal-badge"></p>
+        <p id="modal-description"></p>
+        <p id="modal-price" class="price"></p>
+        <p id="modal-stock" class="status"></p>
+      </div>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Retail Hub | Benjamin Iriganje</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>

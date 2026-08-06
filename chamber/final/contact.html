@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retail Hub - Contact Us</title>
+  <meta name="description" content="Get in touch with Retail Hub for inventory inquiries, store hours, or bulk order requests.">
+  <meta name="author" content="Benjamin Iriganje">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>Retail Hub</h1>
+      </div>
+      <button id="menu-toggle" aria-label="Toggle Navigation Menu">
+        <span class="hamburger">&#9776;</span>
+        <span class="close hidden">&times;</span>
+      </button>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="contact-layout">
+      <!-- Contact Form Section -->
+      <section class="card">
+        <h2>Send Us a Message</h2>
+        <form id="contact-form" action="#" method="get">
+          <label for="fullname">Full Name *</label>
+          <input type="text" id="fullname" name="fullname" required placeholder="John Doe">
+
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="example@domain.com">
+
+          <label for="inquiry-type">Inquiry Subject</label>
+          <select id="inquiry-type" name="inquiry">
+            <option value="stock">Product Stock Check</option>
+            <option value="bulk">Bulk Order Quote</option>
+            <option value="general">General Question</option>
+          </select>
+
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+
+          <button type="submit" class="submit-btn">Submit Inquiry</button>
+        </form>
+        <div id="form-feedback" class="feedback-message hidden"></div>
+      </section>
+
+      <!-- Store Info Sidebar -->
+      <aside class="card">
+        <h2>Store Location &amp; Hours</h2>
+        <div class="info-block">
+          <h3>Address</h3>
+          <p>Retail Hub Storefront</p>
+          <p>Central Shop Plaza, Main Avenue</p>
+        </div>
+
+        <div class="info-block">
+          <h3>Operating Hours</h3>
+          <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+          <p>Saturday: 9:00 AM - 4:00 PM</p>
+          <p>Sunday: Closed</p>
+        </div>
+
+        <div class="info-block">
+          <h3>Direct Contact</h3>
+          <p>Email: support@retailhub-local.org</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Retail Hub | Benjamin Iriganje</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
