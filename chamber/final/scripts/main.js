@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return `
       <article class="product-card card">
         <div>
-          <h3>${item.name}</h3>
+          <h2>${item.name}</h2>
           <p class="price">${item.price}</p>
           <p class="status ${item.inStock ? 'in-stock' : 'out-of-stock'}">
             ${item.inStock ? 'In Stock' : 'Out of Stock'}
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Populate Home Page Featured Section (First 3 Items)
   if (homeFeaturedGrid) {
-    const featuredItems = products.slice(0, 3);
+    const featuredItems = products.slice(0, 2);
     homeFeaturedGrid.innerHTML = featuredItems.map(createProductCardMarkup).join("");
   }
 

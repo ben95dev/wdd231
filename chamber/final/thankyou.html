@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Retail Hub - Thank You</title>
+  <title>Retail Hub</title>
   <meta name="description" content="Thank you for submitting your contact request to Retail Hub.">
   <meta name="author" content="Benjamin Iriganje">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -14,7 +14,12 @@
 <body>
   <header>
     <div class="header-container">
-      <div class="logo"><h1>Retail Hub</h1></div>
+      <div class="logo">
+        <a href="index.html" class="logo-link">
+          <img src="images/favicon.svg" alt="Retail Hub Logo" class="logo-img" width="45" height="45">
+          <span>Retail Hub</span>
+        </a>
+      </div>
       <nav id="primary-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -28,16 +33,17 @@
 
   <main class="main-layout">
     <section class="card">
-      <h2>Inquiry Received</h2>
+      <!-- Single <h1> inside <main> -->
+      <h1>Inquiry Received</h1>
       <p>Thank you for reaching out! We have recorded your submission:</p>
-      <div id="results" class="form-results" style="margin-top: 1rem; line-height: 1.8;"></div>
-      <a href="index.html" class="cta-button" style="margin-top:1.5rem;">Return to Home</a>
+      <div id="results" class="form-results line-height-lg"></div>
+      <a href="index.html" class="cta-button margin-top-md">Return to Home</a>
     </section>
   </main>
 
   <footer>
     <p>&copy; <span id="currentyear"></span> Retail Hub | Benjamin Iriganje</p>
-    <p><a href="attributions.html" style="color: var(--secondary-color);">Attributions</a></p>
+    <p><a href="attributions.html" class="footer-link">Attributions</a></p>
     <p id="lastModified"></p>
   </footer>
 </body>

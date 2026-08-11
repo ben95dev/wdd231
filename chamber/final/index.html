@@ -3,30 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Retail Hub - Quality Products & Local Supplies</title>
+  <title>Retail Hub</title>
   <meta name="description" content="Retail Hub storefront catalog showcasing local product inventory, pricing, and operating hours.">
   <meta name="author" content="Benjamin Iriganje">
 
-  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Retail Hub - Quality Products & Local Supplies">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/og-share.jpg">
   <meta property="og:url" content="https://biriganje.github.io/wdd231/final/index.html">
   <meta property="og:description" content="Retail Hub storefront catalog showcasing local product inventory, pricing, and operating hours.">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/main.css">
-  
-  <!-- JavaScript ES Module -->
   <script type="module" src="scripts/main.js"></script>
 </head>
 <body>
@@ -34,7 +28,10 @@
   <header>
     <div class="header-container">
       <div class="logo">
-        <h1>Retail Hub</h1>
+        <a href="index.html" class="logo-link">
+          <img src="images/favicon.svg" alt="Retail Hub Logo" class="logo-img" width="45" height="45">
+          <span>Retail Hub</span>
+        </a>
       </div>
       <button id="menu-toggle" aria-label="Toggle Navigation Menu">
         <span class="hamburger">&#9776;</span>
@@ -52,9 +49,10 @@
   </header>
 
   <main>
+    <!-- Single <h1> tag inside <main> -->
     <section class="hero">
       <div class="hero-content">
-        <h2>Your Trusted Local Retail Partner</h2>
+        <h1>Your Trusted Local Retail Partner</h1>
         <p>Explore our in-stock products, bulk order discounts, and direct store inquiries.</p>
         <a href="#featured" id="view-featured-btn" class="cta-button">View Featured Items</a>
       </div>
@@ -91,7 +89,6 @@
       </aside>
     </div>
 
-    <!-- Product Details Modal Dialog -->
     <dialog id="product-modal">
       <div class="modal-content">
         <button id="close-modal" aria-label="Close dialog">&times;</button>
@@ -107,8 +104,8 @@
   <footer>
     <p>&copy; <span id="currentyear"></span> Retail Hub | Benjamin Iriganje</p>
     <p>
-      <a href="attributions.html" style="color: var(--secondary-color);">Attributions</a> | 
-      <a href="https://youtube.com" target="_blank" rel="noopener" style="color: var(--secondary-color);">Project Video Demonstration</a>
+      <a href="attributions.html" class="footer-link">Attributions</a> | 
+      <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-link">Project Video Demonstration</a>
     </p>
     <p id="lastModified"></p>
   </footer>
