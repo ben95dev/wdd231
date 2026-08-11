@@ -3,16 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Retail Hub</title>
+  <title>Retail Hub - Asset Attributions</title>
   <meta name="description" content="Attributions and asset sources for the Retail Hub website project.">
   <meta name="author" content="Benjamin Iriganje">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Retail Hub - Asset Attributions">
+  <meta property="og:description" content="View attributions, credits, and asset sources for the Retail Hub web application project.">
+  <meta property="og:image" content="https://ben95dev.github.io/wdd231/chamber/images/favicon.svg">
+  <meta property="og:url" content="https://ben95dev.github.io/wdd231/retailhub/attributions.html">
+
+  <!-- Google Fonts API -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
 </head>
 <body class="attributions-body">
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html" class="logo-link">
+          <img src="images/favicon.svg" alt="Retail Hub Logo" class="logo-img" width="45" height="45">
+          <span>Retail Hub</span>
+        </a>
+      </div>
+      <button id="menu-toggle" aria-label="Toggle Navigation Menu">
+        <span class="hamburger">&#9776;</span>
+        <span class="close hidden">&times;</span>
+      </button>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <!-- Single <h1> element inside <main> -->
     <h1>Asset Attributions</h1>
     <ul>
       <li>Typography: Montserrat &amp; Open Sans via <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a></li>
@@ -21,5 +59,11 @@
     </ul>
     <p class="margin-top-md"><a href="index.html">&larr; Back to Home</a></p>
   </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Retail Hub | Benjamin Iriganje</p>
+    <p id="lastModified"></p>
+  </footer>
+
 </body>
 </html>
